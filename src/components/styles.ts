@@ -34,7 +34,6 @@ export const DescriptionSubTitle = styled.div`
   font-size: 12px;
   text-decoration: underline;
   justify-content: start;
-  padding: 0 5px;
 `
 
 export const Description = styled.div`
