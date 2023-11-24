@@ -11,10 +11,11 @@ export const Game: React.FC = () =>  (
             <Subtitle>GAME</Subtitle>
             <DescriptionSubTitle>RULES:</DescriptionSubTitle>
             <Description>
-                Enter time in milisecond, press start. After it try to click on highlighted box before timer is left.
-                If you did it - you'll get 1 point.
-                If time is left and you din't click - 1 score goes to computer.
-                To win the game to need to collect 10 points. Good luck!
+                Enter time in milliseconds, press start. After that try to click on highlighted box before time is left.
+                If you'll catch - you'll get 1 point.
+                If time is over and you didn't catch - 1 score goes to computer.
+                You need to collect 10 points to win the game.
+                Good luck!
             </Description>
         </TextContainer>
         <ControlPanel />
