@@ -4,19 +4,21 @@ export const GameContainer = styled.div`
   background-color: blanchedalmond;
   display: flex;
   width: 100%;
+  max-width: 450px;
   height: 100%;
   flex-direction: column;
   align-items: center;
-  margin: 10px 0;
+  margin: 10px auto;
+  padding: 0 10px;
+  box-sizing: border-box;
 `
 
 export const TextContainer = styled.div`
   display: flex;
   flex-direction: column;
-  width: 450px;
   border-bottom: 1px solid black;
   margin-bottom: 20px;
-  paddin-bottom: 10px;
+  padding-bottom: 10px;
 `
 export const Title = styled.h2`
   margin: 0;

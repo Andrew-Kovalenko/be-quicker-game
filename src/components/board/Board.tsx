@@ -2,7 +2,7 @@ import React from "react";
 import {initialBoxes} from "../../constants";
 import {REDUCER_ACTION_TYPE, useGameDispatch, useGameState} from "../../context";
 import {useActiveBox} from "../../hooks";
-import {BoardContainer, Square} from "./styles";
+import {BoardContainer, Square, Squares} from "./styles";
 
 export const Board: React.FC = () => {
     const state = useGameState();
@@ -21,15 +21,17 @@ export const Board: React.FC = () => {
 
     return (
         <BoardContainer>
-            {initialBoxes.map(it => (
-                <Square
-                    key={it}
-                    onClick={() => onActiveClick(it)}
-                    isActiveBox={it === state.activeBox}
-                    isGuessedByUser={state.userBoxes.includes(it)}
-                    isGuessedByPC={state.pcBoxes.includes(it)}
-                />
-            ))}
+            <Squares>
+                {initialBoxes.map(it => (
+                    <Square
+                        key={it}
+                        onClick={() => onActiveClick(it)}
+                        isActiveBox={it === state.activeBox}
+                        isGuessedByUser={state.userBoxes.includes(it)}
+                        isGuessedByPC={state.pcBoxes.includes(it)}
+                    />
+                ))}
+            </Squares>
         </BoardContainer>
     );
 }
